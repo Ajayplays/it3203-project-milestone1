@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#eff6ff"/>
+  <rect x="170" y="110" width="460" height="280" rx="18" fill="#0f172a"/>
+  <rect x="210" y="150" width="380" height="200" rx="12" fill="#1d4ed8" opacity="0.9"/>
+  <path d="M400 80 L495 120 L495 220 C495 295 445 345 400 365 C355 345 305 295 305 220 L305 120 Z" fill="#ffffff" opacity="0.95"/>
+  <path d="M400 120 C430 140 450 145 465 150 V220 C465 270 435 305 400 325 C365 305 335 270 335 220 V150 C350 145 370 140 400 120Z" fill="#1d4ed8"/>
+  <rect x="380" y="195" width="40" height="70" rx="8" fill="#ffffff"/>
+  <path d="M370 195 a30 30 0 1 1 60 0" fill="none" stroke="#ffffff" stroke-width="14"/>
+  <text x="400" y="440" font-family="Arial" font-size="30" text-anchor="middle" fill="#0f172a">Cybersecurity Project</text>
+</svg>

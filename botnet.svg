@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="420" viewBox="0 0 700 420">
+  <rect width="700" height="420" fill="#f5f3ff"/>
+  <circle cx="350" cy="170" r="58" fill="#6d28d9"/>
+  <text x="350" y="178" font-family="Arial" font-size="22" text-anchor="middle" fill="#ffffff">Controller</text>
+  <circle cx="170" cy="90" r="42" fill="#a78bfa"/>
+  <circle cx="530" cy="90" r="42" fill="#a78bfa"/>
+  <circle cx="110" cy="260" r="42" fill="#a78bfa"/>
+  <circle cx="270" cy="310" r="42" fill="#a78bfa"/>
+  <circle cx="430" cy="310" r="42" fill="#a78bfa"/>
+  <circle cx="590" cy="260" r="42" fill="#a78bfa"/>
+  <line x1="350" y1="170" x2="170" y2="90" stroke="#6d28d9" stroke-width="6"/>
+  <line x1="350" y1="170" x2="530" y2="90" stroke="#6d28d9" stroke-width="6"/>
+  <line x1="350" y1="170" x2="110" y2="260" stroke="#6d28d9" stroke-width="6"/>
+  <line x1="350" y1="170" x2="270" y2="310" stroke="#6d28d9" stroke-width="6"/>
+  <line x1="350" y1="170" x2="430" y2="310" stroke="#6d28d9" stroke-width="6"/>
+  <line x1="350" y1="170" x2="590" y2="260" stroke="#6d28d9" stroke-width="6"/>
+  <text x="350" y="390" font-family="Arial" font-size="30" text-anchor="middle" fill="#4c1d95">Botnet Network</text>
+</svg>

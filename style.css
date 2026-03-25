@@ -1,0 +1,162 @@
+/* IT 3203 Project Milestone #1
+   Single stylesheet for all pages
+   Demonstrates element, class, and ID selectors
+*/
+
+:root {
+  --primary: #0f172a;
+  --secondary: #1d4ed8;
+  --accent: #e2e8f0;
+  --light: #f8fafc;
+  --text: #1e293b;
+  --card: #ffffff;
+  --border: #cbd5e1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--primary);
+  color: white;
+  padding: 20px;
+  border-bottom: 4px solid var(--secondary);
+}
+
+#site-title {
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav {
+  margin-top: 12px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+nav a:hover {
+  background: var(--secondary);
+  transform: translateY(-1px);
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 24px auto;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+  margin-bottom: 20px;
+}
+
+.hero-image,
+.topic-image {
+  width: 100%;
+  max-width: 500px;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 8px;
+  background: white;
+}
+
+.highlight {
+  color: var(--secondary);
+  font-weight: bold;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background: #dbeafe;
+}
+
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 18px;
+  margin-top: 30px;
+}
+
+footer a {
+  color: #93c5fd;
+}
+
+.resource-list a,
+.content-link {
+  color: var(--secondary);
+}
+
+.resource-list a:hover,
+.content-link:hover {
+  color: #0f172a;
+}
+
+.profile-box {
+  background: #eff6ff;
+  border-left: 6px solid var(--secondary);
+}
+
+.key-term-list li {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 800px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+}
