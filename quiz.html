@@ -30,12 +30,22 @@ h1 {
 button {
     padding: 10px;
     margin-top: 10px;
+    margin-right: 10px;
 }
 </style>
-<script defer src="quiz.js"></script>
+
 </head>
 
 <body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html">Home</a> |
+  <a href="malware.html">Malware</a> |
+  <a href="spoofing.html">Spoofing</a> |
+  <a href="botnets.html">Botnets</a> |
+  <a href="quiz.html">Quiz</a>
+</nav>
 
 <h1>Cybersecurity Quiz</h1>
 
@@ -123,7 +133,7 @@ function gradeQuiz() {
         output += "<p class='incorrect'>Q4 Incorrect (Answer: Infected computers)</p>";
     }
 
-    // Q5 (multi select)
+    // Q5
     let selected = document.querySelectorAll('input[name="q5"]:checked');
     let answers = Array.from(selected).map(el => el.value);
 
@@ -140,6 +150,14 @@ function gradeQuiz() {
     document.getElementById("results").innerHTML = `
         <h2>${result}</h2>
         <h3>Score: ${score}/${total} (${percent}%)</h3>
+        <hr>
+        <p><strong>Correct Answers:</strong></p>
+        <p>Q1: malicious</p>
+        <p>Q2: Virus</p>
+        <p>Q3: Pretending to be someone else</p>
+        <p>Q4: Infected computers</p>
+        <p>Q5: Virus & Worm</p>
+        <hr>
         ${output}
     `;
 }
