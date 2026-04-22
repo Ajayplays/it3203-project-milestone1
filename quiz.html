@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cybersecurity Quiz</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 40px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+#results {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+.correct { color: green; }
+.incorrect { color: red; }
+
+button {
+    padding: 10px;
+    margin-top: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Cybersecurity Quiz</h1>
+
+<form id="quizForm">
+
+<div class="question">
+    <p>1. Malware is ______ software.</p>
+    <input type="text" id="q1">
+</div>
+
+<div class="question">
+    <p>2. Which is malware?</p>
+    <input type="radio" name="q2" value="a"> Firewall<br>
+    <input type="radio" name="q2" value="b"> Virus<br>
+    <input type="radio" name="q2" value="c"> Keyboard<br>
+</div>
+
+<div class="question">
+    <p>3. Spoofing means:</p>
+    <input type="radio" name="q3" value="a"> Protecting data<br>
+    <input type="radio" name="q3" value="b"> Pretending to be someone else<br>
+    <input type="radio" name="q3" value="c"> Deleting files<br>
+</div>
+
+<div class="question">
+    <p>4. A botnet is:</p>
+    <input type="radio" name="q4" value="a"> A safe network<br>
+    <input type="radio" name="q4" value="b"> Infected computers controlled together<br>
+    <input type="radio" name="q4" value="c"> Antivirus software<br>
+</div>
+
+<div class="question">
+    <p>5. Select ALL malware types:</p>
+    <input type="checkbox" name="q5" value="virus"> Virus<br>
+    <input type="checkbox" name="q5" value="worm"> Worm<br>
+    <input type="checkbox" name="q5" value="vpn"> VPN<br>
+</div>
+
+<button type="button" onclick="gradeQuiz()">Submit</button>
+<button type="reset" onclick="resetQuiz()">Reset</button>
+
+</form>
+
+<div id="results"></div>
+
+<script>
+function gradeQuiz() {
+    let score = 0;
+    let total = 5;
+    let output = "";
+
+    // Q1
+    let q1 = document.getElementById("q1").value.toLowerCase();
+    if (q1 === "malicious") {
+        score++;
+        output += "<p class='correct'>Q1 Correct</p>";
+    } else {
+        output += "<p class='incorrect'>Q1 Incorrect (Answer: malicious)</p>";
+    }
+
+    // Q2
+    let q2 = document.querySelector('input[name="q2"]:checked');
+    if (q2 && q2.value === "b") {
+        score++;
+        output += "<p class='correct'>Q2 Correct</p>";
+    } else {
+        output += "<p class='incorrect'>Q2 Incorrect (Answer: Virus)</p>";
+    }
+
+    // Q3
+    let q3 = document.querySelector('input[name="q3"]:checked');
+    if (q3 && q3.value === "b") {
+        score++;
+        output += "<p class='correct'>Q3 Correct</p>";
+    } else {
+        output += "<p class='incorrect'>Q3 Incorrect (Answer: Pretending to be someone else)</p>";
+    }
+
+    // Q4
+    let q4 = document.querySelector('input[name="q4"]:checked');
+    if (q4 && q4.value === "b") {
+        score++;
+        output += "<p class='correct'>Q4 Correct</p>";
+    } else {
+        output += "<p class='incorrect'>Q4 Incorrect (Answer: Infected computers)</p>";
+    }
+
+    // Q5 (multi select)
+    let selected = document.querySelectorAll('input[name="q5"]:checked');
+    let answers = Array.from(selected).map(el => el.value);
+
+    if (answers.includes("virus") && answers.includes("worm") && !answers.includes("vpn")) {
+        score++;
+        output += "<p class='correct'>Q5 Correct</p>";
+    } else {
+        output += "<p class='incorrect'>Q5 Incorrect (Answers: Virus & Worm)</p>";
+    }
+
+    let percent = (score / total) * 100;
+    let result = percent >= 70 ? "PASS" : "FAIL";
+
+    document.getElementById("results").innerHTML = `
+        <h2>${result}</h2>
+        <h3>Score: ${score}/${total} (${percent}%)</h3>
+        ${output}
+    `;
+}
+
+function resetQuiz() {
+    document.getElementById("results").innerHTML = "";
+}
+</script>
+
+</body>
+</html>
