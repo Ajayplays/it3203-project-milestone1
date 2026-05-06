@@ -36,6 +36,121 @@ header {
   margin: 0;
   font-size: 2rem;
 }
+/* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 5px;
+}
+
+nav a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+nav a.active {
+  background-color: #008CBA;
+  border-radius: 5px;
+}
+
+/* Main Content */
+.container {
+  padding: 20px;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Quiz Form */
+form {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+input, button {
+  margin-top: 10px;
+}
+
+/* ========================= */
+/* RESPONSIVE DESIGN */
+/* ========================= */
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
+
+/* Phones */
+@media screen and (max-width: 480px) {
+
+  nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  form {
+    padding: 10px;
+  }
+}
 
 nav {
   margin-top: 12px;
