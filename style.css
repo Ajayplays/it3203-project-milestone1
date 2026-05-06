@@ -297,3 +297,9 @@ footer a {
     width: 100%;
   }
 }
+nav a.active {
+  background-color: #008CBA;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+}
